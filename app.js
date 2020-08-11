@@ -23,7 +23,8 @@ const addItem = (e) => {
   } else if (value && editFlag) {
     console.log('editing');
   } else {
-    console.log('empty value');
+    alert.textContent = 'empty value';
+    alert.classList.add('alert-danger');
   }
 };
 
