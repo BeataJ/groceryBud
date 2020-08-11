@@ -17,7 +17,8 @@ let editID = '';
 const addItem = (e) => {
   e.preventDefault();
   const value = grocery.value;
-  console.log(value);
+  const id = new Date().getTime().toString();
+  console.log(id);
 };
 
 // ****** LOCAL STORAGE **********
