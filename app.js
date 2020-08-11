@@ -13,8 +13,13 @@ let editFlag = false;
 let editID = '';
 
 // ****** EVENT LISTENERS **********
+form.addEventListener('submit', addItem);
 
 // ****** FUNCTIONS **********
+
+const addItem = (e) => {
+  e.preventDefault();
+};
 
 // ****** LOCAL STORAGE **********
 
