@@ -12,15 +12,17 @@ let editElement;
 let editFlag = false;
 let editID = '';
 
-// ****** EVENT LISTENERS **********
-form.addEventListener('submit', addItem);
-
 // ****** FUNCTIONS **********
 
 const addItem = (e) => {
   e.preventDefault();
+  const value = grocery.value;
+  console.log(value);
 };
 
 // ****** LOCAL STORAGE **********
 
 // ****** SETUP ITEMS **********
+
+// ****** EVENT LISTENERS **********
+form.addEventListener('submit', addItem);
