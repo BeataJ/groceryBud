@@ -82,4 +82,7 @@ const addToLocalStorage = (id, value) => {
 // ****** SETUP ITEMS **********
 
 // ****** EVENT LISTENERS **********
+// submit form
 form.addEventListener('submit', addItem);
+// clear items btn
+clearBtn.addEventListener('click', clearItems);
