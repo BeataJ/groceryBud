@@ -75,6 +75,7 @@ const clearItems = () => {
 // delete function
 const deleteItem = (e) => {
   const element = e.currentTarget.parentElement.parentElement;
+  const id = element.dataset.id;
   list.removeChild(element);
   if (list.children.length === 0) {
     container.classList.remove('show-container');
@@ -113,6 +114,7 @@ const setBackToDefault = () => {
 const addToLocalStorage = (id, value) => {
   console.log('added to local storage');
 };
+const removeFromLocalStorage = (id) => {};
 
 // ****** SETUP ITEMS **********
 
