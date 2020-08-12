@@ -73,7 +73,15 @@ const displayAlert = (text, action) => {
   }, 3000);
 };
 
+// set to default
+const setBackToDefault = () => {
+  console.log('set back to default');
+};
+
 // ****** LOCAL STORAGE **********
+const addToLocalStorage = (id, value) => {
+  console.log('added to local storage');
+};
 
 // ****** SETUP ITEMS **********
 
