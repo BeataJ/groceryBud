@@ -79,6 +79,7 @@ const deleteItem = (e) => {
   if (list.children.length === 0) {
     container.classList.remove('show-container');
   }
+  displayAlert('item remove', 'danger');
 };
 
 const editItem = () => {
@@ -94,7 +95,7 @@ const displayAlert = (text, action) => {
   setTimeout(() => {
     alert.textContent = '';
     alert.classList.remove(`alert-${action}`);
-  }, 3000);
+  }, 2000);
 };
 
 // set back to default
