@@ -41,11 +41,18 @@ const addItem = (e) => {
     list.appendChild(element);
     // display alert
     displayAlert('item added to the list', 'success');
+    container.classList.add('show-container');
   } else if (value && editFlag) {
     console.log('editing');
   } else {
     displayAlert('please enter value', 'danger');
   }
+
+  clearInput();
+};
+
+const clearInput = () => {
+  grocery.value = '';
 };
 
 // display alert
