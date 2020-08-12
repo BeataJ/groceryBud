@@ -23,6 +23,20 @@ const addItem = (e) => {
     // add class
     element.classList.add('grocery-item');
     // add id
+    const attr = document.createAttribute('data-id');
+    attr.value = id;
+    element.setAttributeNode(attr);
+    element.innerHTML = `
+      <p class="title">item</p>
+      <div class="btn-container">
+        <button type="button" class="edit-btn">
+          <i class="fas fa-edit"></i>
+        </button>
+        <button type="button" class="delete-btn">
+          <i class="fas fa-trash"></i>
+        </button>
+      </div>
+      `;
   } else if (value && editFlag) {
     console.log('editing');
   } else {
