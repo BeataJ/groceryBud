@@ -83,11 +83,18 @@ const deleteItem = (e) => {
   displayAlert('item remove', 'danger');
   setBackToDefault();
   // remove from local storage
-  removeFromLocalStorage(id);
+  // removeFromLocalStorage(id);
 };
 
-const editItem = () => {
-  console.log('item edit');
+const editItem = (e) => {
+  const element = e.currentTarget.parentElement.parentElement;
+  // set edit element
+  editElement = e.currentTarget.parentElement.previousElementSibling;
+  // set form value
+  grocery.value = editElement.innerHTML;
+  editFlag = true;
+  editID = element.dataset.id;
+  submitBtn.textContent = 'edit';
 };
 
 // display alert
