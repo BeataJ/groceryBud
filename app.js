@@ -66,9 +66,12 @@ const displayAlert = (text, action) => {
   }, 3000);
 };
 
-// set to default
+// set back to default
 const setBackToDefault = () => {
-  console.log('set back to default');
+  grocery.value = '';
+  editFlag = false;
+  editID = '';
+  submitBtn.textContent = 'submit';
 };
 
 // ****** LOCAL STORAGE **********
