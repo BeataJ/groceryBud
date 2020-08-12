@@ -23,9 +23,13 @@ const addItem = (e) => {
   } else if (value && editFlag) {
     console.log('editing');
   } else {
-    alert.textContent = 'empty value';
-    alert.classList.add('alert-danger');
+    displayAlert('please enter value', 'danger');
   }
+};
+
+const displayAlert = (text, action) => {
+  alert.textContent = text;
+  alert.classList.add(`alert-${action}`);
 };
 
 // ****** LOCAL STORAGE **********
