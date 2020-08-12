@@ -19,7 +19,10 @@ const addItem = (e) => {
   const value = grocery.value;
   const id = new Date().getTime().toString();
   if (value && !editFlag) {
-    console.log('add item to the list');
+    const element = document.createElement('article');
+    // add class
+    element.classList.add('grocery-item');
+    // add id
   } else if (value && editFlag) {
     console.log('editing');
   } else {
