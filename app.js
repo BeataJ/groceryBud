@@ -27,9 +27,16 @@ const addItem = (e) => {
   }
 };
 
+// display alert
 const displayAlert = (text, action) => {
   alert.textContent = text;
   alert.classList.add(`alert-${action}`);
+
+  // remove alert
+  setTimeout(() => {
+    alert.textContent = '';
+    alert.classList.remove(`alert-${action}`);
+  }, 3000);
 };
 
 // ****** LOCAL STORAGE **********
