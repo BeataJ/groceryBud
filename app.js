@@ -37,6 +37,8 @@ const addItem = (e) => {
         </button>
       </div>
       `;
+    const deleteBtn = element.querySelector('.delete-btn');
+    const editBtn = element.querySelector('.edit-btn');
     // append child
     list.appendChild(element);
     // display alert
