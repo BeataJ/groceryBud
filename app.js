@@ -63,6 +63,8 @@ const clearItems = () => {
     });
   }
   container.classList.remove('show-container');
+  displayAlert('empty list', 'danger');
+  // localStorage.remove('list')
 };
 
 // display alert
