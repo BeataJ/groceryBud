@@ -72,6 +72,15 @@ const clearItems = () => {
   // localStorage.remove('list')
 };
 
+// delete function
+const deleteItem = () => {
+  console.log('item delete');
+};
+
+const editItem = () => {
+  console.log('item edit');
+};
+
 // display alert
 const displayAlert = (text, action) => {
   alert.textContent = text;
