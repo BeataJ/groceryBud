@@ -41,7 +41,12 @@ const addItem = (e) => {
     list.appendChild(element);
     // display alert
     displayAlert('item added to the list', 'success');
+    // show container
     container.classList.add('show-container');
+    // add to local storge
+    addToLocalStorage(id, value);
+    // set back to default
+    setBackToDefault();
   } else if (value && editFlag) {
     console.log('editing');
   } else {
@@ -51,6 +56,7 @@ const addItem = (e) => {
   clearInput();
 };
 
+// clear input
 const clearInput = () => {
   grocery.value = '';
 };
