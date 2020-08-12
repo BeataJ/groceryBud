@@ -80,6 +80,7 @@ const deleteItem = (e) => {
     container.classList.remove('show-container');
   }
   displayAlert('item remove', 'danger');
+  setBackToDefault();
 };
 
 const editItem = () => {
