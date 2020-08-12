@@ -73,8 +73,9 @@ const clearItems = () => {
 };
 
 // delete function
-const deleteItem = () => {
-  console.log('item delete');
+const deleteItem = (e) => {
+  const element = e.currentTarget.parentElement.parentElement;
+  list.removeChild(element);
 };
 
 const editItem = () => {
