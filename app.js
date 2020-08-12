@@ -52,13 +52,6 @@ const addItem = (e) => {
   } else {
     displayAlert('please enter value', 'danger');
   }
-
-  clearInput();
-};
-
-// clear input
-const clearInput = () => {
-  grocery.value = '';
 };
 
 // display alert
