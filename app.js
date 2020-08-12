@@ -81,6 +81,8 @@ const deleteItem = (e) => {
   }
   displayAlert('item remove', 'danger');
   setBackToDefault();
+  // remove from local storage
+  removeFromLocalStorage(id);
 };
 
 const editItem = () => {
