@@ -76,6 +76,9 @@ const clearItems = () => {
 const deleteItem = (e) => {
   const element = e.currentTarget.parentElement.parentElement;
   list.removeChild(element);
+  if (list.children.length === 0) {
+    container.classList.remove('show-container');
+  }
 };
 
 const editItem = () => {
