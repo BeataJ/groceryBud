@@ -162,3 +162,5 @@ const getLocalStorage = () => {
 form.addEventListener('submit', addItem);
 // clear items btn
 clearBtn.addEventListener('click', clearItems);
+// load items
+window.addEventListener('DOMContentLoaded', setupItem);
