@@ -19,6 +19,7 @@ const addItem = (e) => {
   const value = grocery.value;
   const id = new Date().getTime().toString();
   if (value && !editFlag) {
+    createListItem(id, value);
     // display alert
     displayAlert('item added to the list', 'success');
     // show container
@@ -138,6 +139,7 @@ const setupItem = () => {
     items.forEach((item) => {
       createListItem(item.id, item.value);
     });
+    container.classList.add('show-container');
   }
 };
 
