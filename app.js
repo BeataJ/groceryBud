@@ -73,7 +73,7 @@ const clearItems = () => {
   container.classList.remove('show-container');
   displayAlert('empty list', 'danger');
   setBackToDefault();
-  // localStorage.remove('list')
+  localStorage.remove('list');
 };
 
 // delete function
@@ -87,7 +87,7 @@ const deleteItem = (e) => {
   displayAlert('item remove', 'danger');
   setBackToDefault();
   // remove from local storage
-  // removeFromLocalStorage(id);
+  removeFromLocalStorage(id);
 };
 
 const editItem = (e) => {
@@ -129,7 +129,16 @@ const addToLocalStorage = (id, value) => {
   items.push(grocery);
   localStorage.setItem('list', JSON.stringify(items));
 };
-const removeFromLocalStorage = (id) => {};
+const removeFromLocalStorage = (id) => {
+  let items = getLocalStorage();
+
+  items = items.filter((item) => {
+    if (item.id !== id) {
+      return item;
+    }
+  });
+  localStorage.setItem('list', JSON.stringify(items));
+};
 const editLocalStorage = (id, value) => {};
 const getLocalStorage = () => {
   return localStorage.getItem('list')
